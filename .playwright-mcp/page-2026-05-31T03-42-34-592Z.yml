@@ -1,0 +1,58 @@
+- generic [ref=e55]:
+  - main "Windows 95 desktop" [ref=e56]:
+    - region "Desktop icons" [ref=e57]:
+      - button "About Me" [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]: 🪪
+        - generic [ref=e60]: About Me
+      - button "Skills.txt" [ref=e61] [cursor=pointer]:
+        - generic [ref=e62]: 📄
+        - generic [ref=e63]: Skills.txt
+      - button "Resume.pdf" [ref=e64] [cursor=pointer]:
+        - generic [ref=e65]: 📋
+        - generic [ref=e66]: Resume.pdf
+      - button "Contact" [ref=e67] [cursor=pointer]:
+        - generic [ref=e68]: ✉️
+        - generic [ref=e69]: Contact
+      - button "Projects" [ref=e70] [cursor=pointer]:
+        - generic [ref=e71]: 💻
+        - generic [ref=e72]: Projects
+      - button [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]: 🌐
+        - generic [ref=e75]: Internet
+      - button [ref=e76] [cursor=pointer]:
+        - generic [ref=e77]: 🖥️
+        - generic [ref=e78]: My Computer
+      - button [ref=e79] [cursor=pointer]:
+        - generic [ref=e80]: 🗑️
+        - generic [ref=e81]: Recycle Bin
+  - contentinfo [ref=e82]:
+    - button "Start menu" [ref=e83] [cursor=pointer]: ⊞ Start
+    - time [ref=e84]: 8:42 PM
+  - dialog "Contact" [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]: Contact
+      - generic [ref=e89]:
+        - button "Minimize" [active] [ref=e90] [cursor=pointer]: _
+        - button "Maximize" [ref=e91] [cursor=pointer]: □
+        - button "Close" [ref=e92] [cursor=pointer]: ✕
+    - article [ref=e94]:
+      - heading "Get in touch" [level=2] [ref=e95]
+      - list [ref=e96]:
+        - listitem [ref=e97]:
+          - 'link "Email: jupiterbaudot@gmail.com" [ref=e98] [cursor=pointer]':
+            - /url: mailto:jupiterbaudot@gmail.com
+            - generic [ref=e99]: 📧
+            - generic [ref=e100]: Email
+            - generic [ref=e101]: jupiterbaudot@gmail.com
+        - listitem [ref=e102]:
+          - 'link "LinkedIn: linkedin.com/in/jupiterbaudot" [ref=e103] [cursor=pointer]':
+            - /url: https://linkedin.com/in/jupiterbaudot
+            - generic [ref=e104]: 💼
+            - generic [ref=e105]: LinkedIn
+            - generic [ref=e106]: linkedin.com/in/jupiterbaudot
+        - listitem [ref=e107]:
+          - 'link "GitHub: github.com/JupiterLikeThePlanet" [ref=e108] [cursor=pointer]':
+            - /url: https://github.com/JupiterLikeThePlanet
+            - generic [ref=e109]: 🐙
+            - generic [ref=e110]: GitHub
+            - generic [ref=e111]: github.com/JupiterLikeThePlanet

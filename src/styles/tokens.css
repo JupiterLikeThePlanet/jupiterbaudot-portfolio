@@ -1,0 +1,56 @@
+:root {
+  /* ── Mac OS palette ─────────────────────────────────── */
+
+  /* hex fallbacks for Safari < 15.4 (no OKLCH support) */
+  --color-bg: #ede8f5;
+  --color-bg-deep: #1a0535;
+  --color-surface: #f5f2fc;
+  --color-surface-mid: #e2daf0;
+  --color-accent: #8b2cf5;
+  --color-accent-soft: #d4c8ee;
+  --color-text: #120d1e;
+  --color-text-muted: #5a4d72;
+  --color-text-faint: #8a7eaa;
+  --color-text-on-deep: #b8aace;
+  --color-mint: #a8e8d0;
+  --color-warning: #d4c060;
+
+  /* OKLCH values (override fallbacks in supporting browsers) */
+  --color-bg:           oklch(95% 0.012 290);
+  --color-bg-deep:      oklch(14% 0.025 290);
+  --color-surface:      oklch(97% 0.010 290);
+  --color-surface-mid:  oklch(91% 0.022 290);
+  --color-accent:       oklch(52% 0.28 295);
+  --color-accent-soft:  oklch(85% 0.06 290);
+  --color-text:         oklch(12% 0.020 290);
+  --color-text-muted:   oklch(42% 0.045 290);
+  --color-text-faint:   oklch(62% 0.030 290);
+  --color-text-on-deep: oklch(75% 0.040 290);
+  --color-mint:         oklch(88% 0.12 165);
+  --color-warning:      oklch(80% 0.15 85);
+
+  /* traffic lights — fixed RGB, not OKLCH */
+  --traffic-red:    #ff5f57;
+  --traffic-yellow: #ffbd2e;
+  --traffic-green:  #28c840;
+
+  /* ── Win95 palette ──────────────────────────────────── */
+  --win-desktop:   #008080;
+  --win-chrome:    #c0c0c0;
+  --win-titlebar:  #000080;
+  --win-text:      #000000;
+  --win-border-hi: #ffffff;
+  --win-border-sh: #404040;
+
+  /* ── Typography ─────────────────────────────────────── */
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', monospace;
+  --font-win:  Arial, sans-serif;
+
+  /* ── Spacing / sizing ───────────────────────────────── */
+  --menubar-height:  28px;
+  --taskbar-height:  36px;
+  --modal-radius:    8px;
+  --icon-area:       44px;
+  --icon-target:     72px;
+}

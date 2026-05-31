@@ -1,0 +1,825 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+/* backdrop-filter solid fallback for Android Chrome */
+@supports not (backdrop-filter: blur(1px)) {
+  .frosted {
+    background-color: rgba(240, 234, 255, 0.96) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   MAC DESKTOP
+───────────────────────────────────────────────────────── */
+
+.mac-desktop {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mac-desktop__stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mac-desktop__wallpaper {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, oklch(75% 0.06 290) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 15% 80%, oklch(80% 0.08 320) 0%, transparent 55%),
+    var(--color-bg);
+  /* hex fallbacks */
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, #c4b8e8 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 15% 80%, #d4bce8 0%, transparent 55%),
+    var(--color-bg);
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, oklch(75% 0.06 290) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 15% 80%, oklch(80% 0.08 320) 0%, transparent 55%),
+    var(--color-bg);
+}
+
+.mac-desktop__scanlines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.013) 3px,
+    rgba(0, 0, 0, 0.013) 4px
+  );
+  pointer-events: none;
+}
+
+.mac-desktop__hero {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 0 64px;
+  max-width: 600px;
+}
+
+.mac-hero__status {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--color-mint);
+  background-color: var(--color-bg-deep);
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 24px;
+}
+
+.mac-hero__name {
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+
+.mac-hero__title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.mac-hero__tagline {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  max-width: 380px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.mac-hero__location {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--color-text-faint);
+}
+
+.mac-desktop__icons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   MENU BAR
+───────────────────────────────────────────────────────── */
+
+.menubar {
+  height: var(--menubar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: rgba(240, 234, 255, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-accent-soft);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.menubar__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menubar__logo {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.menubar__nav {
+  display: flex;
+  gap: 16px;
+}
+
+.menubar__nav-item {
+  font-size: 13px;
+  color: var(--color-text-faint);
+  cursor: default;
+  user-select: none;
+}
+
+.menubar__clock {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-faint);
+}
+
+/* ─────────────────────────────────────────────────────────
+   TASKBAR (MAC)
+───────────────────────────────────────────────────────── */
+
+.taskbar {
+  height: var(--taskbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 234, 255, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--color-accent-soft);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.taskbar__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--color-text-faint);
+}
+
+/* ─────────────────────────────────────────────────────────
+   DESKTOP ICONS — MAC VARIANT
+───────────────────────────────────────────────────────── */
+
+.mac-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: var(--icon-target);
+  min-height: var(--icon-target);
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 140ms ease;
+}
+
+.mac-icon:hover {
+  background-color: var(--color-accent-soft);
+}
+
+.mac-icon:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.mac-icon__box {
+  width: var(--icon-area);
+  height: var(--icon-area);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: linear-gradient(135deg, var(--color-surface-mid), var(--color-accent-soft));
+  border-radius: 10px;
+  border: 1px solid var(--color-accent-soft);
+}
+
+.mac-icon__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────
+   DESKTOP ICONS — WIN95 VARIANT
+───────────────────────────────────────────────────────── */
+
+.win-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: var(--icon-target);
+  min-height: var(--icon-target);
+  padding: 8px;
+  font-family: var(--font-win);
+}
+
+.win-icon:focus-visible {
+  outline: 1px dotted var(--win-text);
+}
+
+.win-icon__box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.win-icon__label {
+  font-family: var(--font-win);
+  font-size: 11px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────
+   WINDOWS 95 DESKTOP
+───────────────────────────────────────────────────────── */
+
+.win-desktop {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--win-desktop);
+  font-family: var(--font-win);
+}
+
+.win-desktop__area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 8px;
+}
+
+.win-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  justify-items: center;
+}
+
+/* ─────────────────────────────────────────────────────────
+   WIN95 TASKBAR
+───────────────────────────────────────────────────────── */
+
+.win-taskbar {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  background-color: var(--win-chrome);
+  border-top: 2px solid var(--win-border-hi);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.win-start-btn {
+  height: 28px;
+  padding: 0 8px;
+  font-family: var(--font-win);
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--win-chrome);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-sh);
+  border-bottom: 2px solid var(--win-border-sh);
+}
+
+.win-start-btn:active {
+  border-top: 2px solid var(--win-border-sh);
+  border-left: 2px solid var(--win-border-sh);
+  border-right: 2px solid var(--win-border-hi);
+  border-bottom: 2px solid var(--win-border-hi);
+}
+
+.win-taskbar__clock {
+  font-family: var(--font-win);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-top: 1px solid var(--win-border-sh);
+  border-left: 1px solid var(--win-border-sh);
+  border-right: 1px solid var(--win-border-hi);
+  border-bottom: 1px solid var(--win-border-hi);
+}
+
+/* ─────────────────────────────────────────────────────────
+   MODAL OVERLAY + WINDOW — SHARED
+───────────────────────────────────────────────────────── */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─────────────────────────────────────────────────────────
+   MODAL WINDOW — MAC VARIANT
+───────────────────────────────────────────────────────── */
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modal-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+}
+
+.modal-window--closing {
+  animation: modal-out 140ms ease-out forwards;
+  pointer-events: none;
+}
+
+.modal-window--mac {
+  width: min(560px, calc(100vw - 48px));
+  max-height: calc(100vh - 80px);
+  border-radius: var(--modal-radius);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+  animation: modal-in 180ms ease forwards;
+}
+
+.modal-chrome {
+  height: 36px;
+  background-color: var(--color-bg-deep);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.traffic-lights {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.traffic-light--red    { background-color: var(--traffic-red); }
+.traffic-light--yellow { background-color: var(--traffic-yellow); }
+.traffic-light--green  { background-color: var(--traffic-green); }
+
+.modal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-on-deep);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.modal-body {
+  background-color: var(--color-surface);
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px - 36px);
+}
+
+/* ─────────────────────────────────────────────────────────
+   MODAL WINDOW — WIN95 VARIANT
+───────────────────────────────────────────────────────── */
+
+.modal-window--win {
+  width: min(480px, calc(100vw - 24px));
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-sh);
+  border-bottom: 2px solid var(--win-border-sh);
+}
+
+.win-titlebar {
+  height: 24px;
+  background-color: var(--win-titlebar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.win-titlebar__title {
+  font-family: var(--font-win);
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.win-titlebar__buttons {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.win-btn {
+  width: 18px;
+  height: 16px;
+  font-family: var(--font-win);
+  font-size: 9px;
+  font-weight: bold;
+  color: var(--win-text);
+  background-color: var(--win-chrome);
+  border-top: 1px solid var(--win-border-hi);
+  border-left: 1px solid var(--win-border-hi);
+  border-right: 1px solid var(--win-border-sh);
+  border-bottom: 1px solid var(--win-border-sh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-btn:active {
+  border-top: 1px solid var(--win-border-sh);
+  border-left: 1px solid var(--win-border-sh);
+  border-right: 1px solid var(--win-border-hi);
+  border-bottom: 1px solid var(--win-border-hi);
+}
+
+.modal-body--win {
+  background-color: var(--win-chrome);
+  padding: 12px;
+  overflow-y: auto;
+  max-height: calc(100vh - 48px - 24px);
+  font-family: var(--font-win);
+  font-size: 11px;
+}
+
+.win-egg-msg {
+  font-family: var(--font-win);
+  font-size: 11px;
+  color: var(--win-text);
+  padding: 8px 4px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   MODAL CONTENT — SHARED
+───────────────────────────────────────────────────────── */
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-content__heading {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.modal-content__subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: -8px;
+}
+
+.modal-content__body {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.modal-content__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.modal-content__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content__subheading {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+}
+
+.modal-content__note {
+  font-size: 13px;
+  color: var(--color-text-faint);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────────
+   PILLS
+───────────────────────────────────────────────────────── */
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--color-text-on-deep);
+  background-color: var(--color-bg-deep);
+  padding: 3px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   RESUME MODAL
+───────────────────────────────────────────────────────── */
+
+.resume-entry {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-accent-soft);
+}
+
+.resume-entry:last-child {
+  border-bottom: none;
+}
+
+.resume-entry__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.resume-entry__company {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.resume-entry__period {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+}
+
+.resume-entry__role {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.resume-download {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.resume-download:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* ─────────────────────────────────────────────────────────
+   CONTACT MODAL
+───────────────────────────────────────────────────────── */
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  transition: background-color 140ms ease;
+}
+
+.contact-link:hover {
+  background-color: var(--color-surface-mid);
+}
+
+.contact-link__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  min-width: 60px;
+}
+
+.contact-link__detail {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
+
+/* ─────────────────────────────────────────────────────────
+   PROJECTS MODAL
+───────────────────────────────────────────────────────── */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  background-color: var(--color-surface-mid);
+  border-radius: 5px;
+  border: 1px solid var(--color-accent-soft);
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-card__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.badge--live {
+  background-color: var(--color-bg-deep);
+  color: var(--color-mint);
+}
+
+.badge--wip {
+  background-color: var(--color-bg-deep);
+  color: var(--color-warning);
+}
+
+.project-card__stack {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+}
+
+.project-card__desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.project-card__link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  align-self: flex-start;
+}
+
+.project-card__link:hover {
+  text-decoration: underline;
+}
