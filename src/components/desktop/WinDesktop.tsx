@@ -40,17 +40,30 @@ const EASTER_EGGS = [
   { emoji: '🗑️', label: 'Recycle Bin' },
 ];
 
+const CONTACT_LINKS = [
+  { emoji: '📧', label: 'Email',    href: 'mailto:jupiterbaudot@gmail.com',          detail: 'jupiterbaudot@gmail.com'       },
+  { emoji: '💼', label: 'LinkedIn', href: 'https://linkedin.com/in/jupiterbaudot',   detail: 'linkedin.com/in/jupiterbaudot' },
+  { emoji: '🐙', label: 'GitHub',   href: 'https://github.com/JupiterLikeThePlanet', detail: 'github.com/JupiterLikeThePlanet'},
+];
+
 export function WinDesktop() {
   const { activeModal, isClosing, openModal, closeModal } = useModal();
   const [eggDialogOpen, setEggDialogOpen] = useState(false);
+  const [startMenuOpen, setStartMenuOpen] = useState(false);
 
   function handleIconClick(id: ModalId, e: React.MouseEvent<HTMLButtonElement>) {
+    setStartMenuOpen(false);
     openModal(id, e.currentTarget);
   }
 
   return (
     <div className="win-desktop">
       <main className="win-desktop__area" aria-label="Windows 95 desktop">
+        <header className="win-desktop__welcome">
+          <p className="win-desktop__name">Jupiter Baudot</p>
+          <p className="win-desktop__position">Full Stack Developer / Product Engineer</p>
+        </header>
+
         <section className="win-icon-grid" aria-label="Desktop icons">
           {ICONS.map(({ id, emoji, label }) => (
             <DesktopIcon
@@ -68,13 +81,60 @@ export function WinDesktop() {
               label={label}
               variant="win"
               decorative
-              onClick={() => setEggDialogOpen(true)}
+              onClick={() => { setStartMenuOpen(false); setEggDialogOpen(true); }}
             />
           ))}
         </section>
       </main>
 
-      <WinTaskbar />
+      {startMenuOpen && (
+        <div
+          className="win-start-backdrop"
+          onClick={() => setStartMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {startMenuOpen && (
+        <div className="win-start-menu" role="menu" aria-label="Start menu">
+          <div className="win-start-menu__sidebar" aria-hidden="true">
+            <span>Windows 95</span>
+          </div>
+          <div className="win-start-menu__content">
+            <div className="win-start-menu__identity">
+              <p className="win-start-menu__name">Jupiter Baudot</p>
+              <p className="win-start-menu__role">Full Stack Developer / Product Engineer</p>
+            </div>
+            <div className="win-start-menu__divider" />
+            <ul className="win-start-menu__links" role="list">
+              {CONTACT_LINKS.map(({ emoji, label, href, detail }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="win-start-menu__link"
+                    role="menuitem"
+                    aria-label={`${label}: ${detail}`}
+                    onClick={() => setStartMenuOpen(false)}
+                  >
+                    <span className="win-start-menu__link-icon" aria-hidden="true">{emoji}</span>
+                    <span className="win-start-menu__link-text">
+                      <span className="win-start-menu__link-label">{label}</span>
+                      <span className="win-start-menu__link-detail">{detail}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      <WinTaskbar
+        onStartClick={() => setStartMenuOpen((o) => !o)}
+        startMenuOpen={startMenuOpen}
+      />
 
       {(activeModal || isClosing) && activeModal && (
         <ModalWindow

@@ -12,6 +12,7 @@ html,
 body,
 #root {
   height: 100%;
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
 }
@@ -116,9 +117,8 @@ svg {
 .mac-desktop__hero {
   position: relative;
   z-index: 1;
-  flex: 1;
-  padding: 0 64px;
-  max-width: 600px;
+  padding: 0 80px;
+  max-width: 800px;
 }
 
 .mac-hero__status {
@@ -134,28 +134,28 @@ svg {
 }
 
 .mac-hero__name {
-  font-size: 52px;
+  font-size: 80px;
   font-weight: 500;
   letter-spacing: -0.03em;
   color: var(--color-text);
-  line-height: 1.05;
-  margin-bottom: 8px;
+  line-height: 1.0;
+  margin-bottom: 12px;
 }
 
 .mac-hero__title {
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--color-text-muted);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .mac-hero__tagline {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-text-muted);
-  max-width: 380px;
+  max-width: 520px;
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .mac-hero__location {
@@ -257,10 +257,9 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  min-width: var(--icon-target);
-  min-height: var(--icon-target);
-  padding: 8px;
+  gap: 8px;
+  min-width: 96px;
+  padding: 10px 8px;
   border-radius: 8px;
   transition: background-color 140ms ease;
 }
@@ -275,20 +274,20 @@ svg {
 }
 
 .mac-icon__box {
-  width: var(--icon-area);
-  height: var(--icon-area);
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 34px;
   background: linear-gradient(135deg, var(--color-surface-mid), var(--color-accent-soft));
-  border-radius: 10px;
+  border-radius: 14px;
   border: 1px solid var(--color-accent-soft);
 }
 
 .mac-icon__label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--color-text-muted);
   text-align: center;
@@ -303,10 +302,9 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  min-width: var(--icon-target);
-  min-height: var(--icon-target);
-  padding: 8px;
+  gap: 5px;
+  min-width: 72px;
+  padding: 8px 4px;
   font-family: var(--font-win);
 }
 
@@ -315,17 +313,17 @@ svg {
 }
 
 .win-icon__box {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 30px;
 }
 
 .win-icon__label {
   font-family: var(--font-win);
-  font-size: 11px;
+  font-size: 12px;
   color: #ffffff;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9);
   text-align: center;
@@ -340,22 +338,48 @@ svg {
   display: flex;
   flex-direction: column;
   height: 100%;
+  height: 100dvh;
   width: 100%;
+  width: 100vw;
   overflow: hidden;
   background-color: var(--win-desktop);
   font-family: var(--font-win);
+  position: relative;
 }
 
 .win-desktop__area {
   flex: 1;
   overflow-y: auto;
-  padding: 16px 8px;
+  padding: 12px 8px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.win-desktop__welcome {
+  text-align: center;
+  padding: 24px 16px 16px;
+}
+
+.win-desktop__name {
+  font-family: var(--font-win);
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.85);
+  margin-bottom: 4px;
+}
+
+.win-desktop__position {
+  font-family: var(--font-win);
+  font-size: 12px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.85);
 }
 
 .win-icon-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: 4px;
   justify-items: center;
 }
 
@@ -403,6 +427,139 @@ svg {
   border-left: 1px solid var(--win-border-sh);
   border-right: 1px solid var(--win-border-hi);
   border-bottom: 1px solid var(--win-border-hi);
+}
+
+/* ─────────────────────────────────────────────────────────
+   WIN95 START MENU
+───────────────────────────────────────────────────────── */
+
+.win-start-btn--active {
+  border-top: 2px solid var(--win-border-sh);
+  border-left: 2px solid var(--win-border-sh);
+  border-right: 2px solid var(--win-border-hi);
+  border-bottom: 2px solid var(--win-border-hi);
+}
+
+.win-start-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+.win-start-menu {
+  position: fixed;
+  bottom: 36px;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  background-color: var(--win-chrome);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-sh);
+  border-bottom: 2px solid var(--win-border-sh);
+  min-width: 260px;
+  max-width: calc(100vw - 8px);
+}
+
+.win-start-menu__sidebar {
+  width: 24px;
+  background-color: var(--win-titlebar);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.win-start-menu__sidebar span {
+  font-family: var(--font-win);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--win-chrome);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.win-start-menu__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 4px;
+}
+
+.win-start-menu__identity {
+  padding: 6px 12px 8px;
+}
+
+.win-start-menu__name {
+  font-family: var(--font-win);
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--win-text);
+  margin-bottom: 2px;
+}
+
+.win-start-menu__role {
+  font-family: var(--font-win);
+  font-size: 10px;
+  color: #444444;
+}
+
+.win-start-menu__divider {
+  height: 1px;
+  background-color: var(--win-border-sh);
+  margin: 0 4px 2px;
+  box-shadow: 0 1px 0 var(--win-border-hi);
+}
+
+.win-start-menu__links {
+  list-style: none;
+}
+
+.win-start-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.win-start-menu__link:hover,
+.win-start-menu__link:focus-visible {
+  background-color: var(--win-titlebar);
+  color: #ffffff;
+  outline: none;
+}
+
+.win-start-menu__link:hover .win-start-menu__link-detail,
+.win-start-menu__link:focus-visible .win-start-menu__link-detail {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.win-start-menu__link-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.win-start-menu__link-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.win-start-menu__link-label {
+  font-family: var(--font-win);
+  font-size: 12px;
+  font-weight: bold;
+  color: inherit;
+}
+
+.win-start-menu__link-detail {
+  font-family: var(--font-win);
+  font-size: 10px;
+  color: #555555;
 }
 
 /* ─────────────────────────────────────────────────────────
