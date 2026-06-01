@@ -10,9 +10,10 @@ import { ProjectsModal } from '../modals/ProjectsModal';
 import { MinesweeperModal } from '../modals/MinesweeperModal';
 import { useModal } from '../../hooks/useModal';
 import type { ModalId } from '../../types';
+import { platformEmoji } from '../../utils/platformEmoji';
 
 const ICONS: { id: ModalId; emoji: string; label: string }[] = [
-  { id: 'about',       emoji: '🪪', label: 'About Me'    },
+  { id: 'about',       emoji: platformEmoji('🪪'), label: 'About Me'    },
   { id: 'skills',      emoji: '📄', label: 'Skills.txt'  },
   { id: 'resume',      emoji: '📋', label: 'Resume.pdf'  },
   { id: 'contact',     emoji: '✉️',  label: 'Contact'     },

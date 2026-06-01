@@ -144,6 +144,8 @@ src/
   styles/
     tokens.css              ← all CSS custom properties
     global.css              ← reset, base styles
+  utils/
+    platformEmoji.ts        ← detects Windows and returns safe emoji fallbacks
   assets/
     icons/                  ← custom SVGs go here (V2)
   App.tsx
@@ -159,6 +161,7 @@ src/
 - Emoji placeholder until custom SVG icons ship (V2)
 - Mac variant: rounded gradient square + label, hover = accent tint
 - Win variant: bevel border square + white text label with text-shadow
+- Always wrap emoji strings with `platformEmoji()` from `src/utils/platformEmoji.ts` — newer emojis (Emoji 13+) may not render on Windows without font updates
 
 ### ModalWindow — Mac variant
 - Traffic lights: red closes, yellow + green decorative (add tooltip "not yet" on hover)
@@ -212,6 +215,7 @@ src/
 - Safari < 15.4: OKLCH needs hex fallback — always provide both
 - Android Chrome: `backdrop-filter` may not work — solid color fallback required
 - Test on real iPhone Safari before shipping
+- Windows (without Segoe UI Emoji 14 update): emojis added in Emoji 13+ may not render — use `platformEmoji()` for any icon emoji; add new fallbacks to `src/utils/platformEmoji.ts` as needed
 
 ---
 

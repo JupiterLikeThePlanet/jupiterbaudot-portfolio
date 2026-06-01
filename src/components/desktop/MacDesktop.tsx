@@ -10,9 +10,10 @@ import { ProjectsModal } from '../modals/ProjectsModal';
 import { MinesweeperModal } from '../modals/MinesweeperModal';
 import { useModal } from '../../hooks/useModal';
 import type { ModalId } from '../../types';
+import { platformEmoji } from '../../utils/platformEmoji';
 
 const ICONS: { id: ModalId; emoji: string; label: string; gradient: string }[] = [
-  { id: 'about',       emoji: '🪪', label: 'About Me',    gradient: 'linear-gradient(135deg, #f0b8d8, #d946ef)' },
+  { id: 'about',       emoji: platformEmoji('🪪'), label: 'About Me',    gradient: 'linear-gradient(135deg, #f0b8d8, #d946ef)' },
   { id: 'skills',      emoji: '📄', label: 'Skills.txt',  gradient: 'linear-gradient(135deg, #a8c8f0, #3b82f6)' },
   { id: 'resume',      emoji: '📋', label: 'Resume.pdf',  gradient: 'linear-gradient(135deg, #fde68a, #f59e0b)' },
   { id: 'contact',     emoji: '✉️',  label: 'Contact',     gradient: 'linear-gradient(135deg, #a8f0d0, #10b981)' },
