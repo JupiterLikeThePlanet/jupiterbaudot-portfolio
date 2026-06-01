@@ -1,0 +1,49 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: ⌘ Jupiter Baudot
+      - navigation "Menu bar" [ref=e7]:
+        - generic [ref=e8]:
+          - button "File" [expanded] [active] [ref=e9] [cursor=pointer]
+          - menu "File menu" [ref=e40]:
+            - paragraph [ref=e41]: Get in touch
+            - 'menuitem "Email: jupiterbaudot@gmail.com" [ref=e42] [cursor=pointer]':
+              - generic [ref=e43]: 📧
+              - generic [ref=e44]: Email
+              - generic [ref=e45]: jupiterbaudot@gmail.com
+            - 'menuitem "LinkedIn: linkedin.com/in/jupiterbaudot" [ref=e46] [cursor=pointer]':
+              - generic [ref=e47]: 💼
+              - generic [ref=e48]: LinkedIn
+              - generic [ref=e49]: linkedin.com/in/jupiterbaudot
+            - 'menuitem "GitHub: github.com/JupiterLikeThePlanet" [ref=e50] [cursor=pointer]':
+              - generic [ref=e51]: 🐙
+              - generic [ref=e52]: GitHub
+              - generic [ref=e53]: github.com/JupiterLikeThePlanet
+        - button "View" [ref=e11] [cursor=pointer]
+        - generic [ref=e12]: Help
+    - time [ref=e13]: 12:01 AM
+  - main [ref=e14]:
+    - region "Introduction" [ref=e16]:
+      - paragraph [ref=e17]: "STATUS: AVAILABLE FOR HIRE"
+      - heading "Jupiter Baudot" [level=1] [ref=e18]
+      - paragraph [ref=e19]: Full Stack Developer / Product Engineer
+      - paragraph [ref=e20]: I build interfaces where design and engineering are the same decision.
+      - paragraph [ref=e21]: Los Angeles
+    - complementary "Desktop icons" [ref=e22]:
+      - button "About Me" [ref=e23] [cursor=pointer]:
+        - generic [ref=e24]: 🪪
+        - generic [ref=e25]: About Me
+      - button "Skills.txt" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: 📄
+        - generic [ref=e28]: Skills.txt
+      - button "Resume.pdf" [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]: 📋
+        - generic [ref=e31]: Resume.pdf
+      - button "Contact" [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]: ✉️
+        - generic [ref=e34]: Contact
+      - button "Projects" [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]: 💻
+        - generic [ref=e37]: Projects
+  - contentinfo [ref=e38]:
+    - generic [ref=e39]: jupiterbaudot.dev — portfolio OS v1.0
