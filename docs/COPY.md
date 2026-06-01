@@ -6,9 +6,9 @@ All user-facing copy lives here. Never write copy directly in components.
 
 ## Meta
 
-Page title: Jupiter Baudot — Design Engineer
-Description: Senior frontend engineer based in Los Angeles. I build interfaces where design and engineering are the same decision.
-OG title: Jupiter Baudot — Design Engineer
+Page title: Jupiter Baudot — Product Engineer
+Description: Senior frontend engineer based in Los Angeles. Frontend roots, full stack reach, design taste included.
+OG title: Jupiter Baudot — Product Engineer
 OG description: Senior frontend engineer · React · TypeScript · Los Angeles
 
 ---
@@ -18,7 +18,7 @@ OG description: Senior frontend engineer · React · TypeScript · Los Angeles
 Name: Jupiter Baudot
 Title: Senior Frontend Engineer · Product Engineer
 Status badge: STATUS: AVAILABLE FOR HIRE
-Tagline: I build interfaces where design and engineering are the same decision.
+Tagline: Frontend roots, full stack reach, design taste included.
 Location line: Los Angeles
 
 ---
@@ -53,9 +53,9 @@ Start button: ⊞ Start
 Window title: About.txt
 Heading: Jupiter Baudot
 Body:
-Senior frontend engineer based in Los Angeles. 8+ years building interfaces at the intersection of design and engineering — Fox Corporation, WebMD, and independent products shipped from concept to production.
+Eight years at Fox Corporation, WebMD, and three SaaS products I designed, built, and shipped solo through my own consulting practice. I write the components, design the systems, and own the full stack when the project calls for it.
 
-I'm the corpus callosum of tech: the bridge between design teams and engineering teams, fluent in both languages. I don't just implement designs — I make them better in the process.
+Designers trust me because I speak their language. Engineers trust me because I've done the work. I mentor junior devs and bring the kind of clarity that helps teams move with confidence.
 
 Tags: Fox Corporation · WebMD · JLP Tech · LSU CS
 
@@ -78,7 +78,7 @@ Claude Code CLI, Cursor, GitHub Copilot, n8n
 
 Window title: Resume.pdf
 Heading: Jupiter Baudot
-Subtitle: Senior Frontend Engineer · Design Engineer · Los Angeles
+Subtitle: Senior Frontend Engineer · Product Engineer · Los Angeles
 
 Experience lines:
 - Fox Corporation · 2022–Present — UI/UX Developer, media asset management platform

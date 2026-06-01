@@ -11,7 +11,7 @@ export function ResumeModal() {
     <article className="modal-content">
       <h2 className="modal-content__heading">Jupiter Baudot</h2>
       <p className="modal-content__subtitle">
-        Senior Frontend Engineer · Design Engineer · Los Angeles
+        Senior Frontend Engineer · Product Engineer · Los Angeles
       </p>
 
       <section className="modal-content__section">

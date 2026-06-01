@@ -6,7 +6,7 @@ Read this file at the start of every session. No exceptions.
 
 ## Project identity
 
-Personal portfolio for Jupiter Baudot — senior frontend engineer and design engineer, Los Angeles.
+Personal portfolio for Jupiter Baudot — senior frontend engineer and product engineer, Los Angeles.
 Live at: `jupiterbaudot.dev` (also: `jupiterbaudot.com` redirects here)
 Repo: `github.com/JupiterLikeThePlanet/jupiterbaudot-portfolio`
 

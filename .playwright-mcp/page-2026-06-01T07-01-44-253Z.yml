@@ -8,7 +8,7 @@
           - button "View" [expanded] [active] [ref=e11] [cursor=pointer]
           - menu "View menu" [ref=e54]:
             - menuitem "Employer View" [ref=e55] [cursor=pointer]:
-              - generic [ref=e56]: 👔
+              # - generic [ref=e56]: 👔
               - generic [ref=e57]: Employer View
         - generic [ref=e12]: Help
     - time [ref=e13]: 12:01 AM

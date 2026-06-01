@@ -1,0 +1,37 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - main "Windows 95 desktop" [ref=e4]:
+      - generic [ref=e5]:
+        - paragraph [ref=e6]: Jupiter Baudot
+        - paragraph [ref=e7]: Senior Frontend Engineer · Product Engineer
+      - region "Desktop icons" [ref=e8]:
+        - button "About Me" [ref=e9] [cursor=pointer]:
+          - generic [ref=e10]: 🪪
+          - generic [ref=e11]: About Me
+        - button "Skills.txt" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: 📄
+          - generic [ref=e14]: Skills.txt
+        - button "Resume.pdf" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: 📋
+          - generic [ref=e17]: Resume.pdf
+        - button "Contact" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: ✉️
+          - generic [ref=e20]: Contact
+        - button "Projects" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: 💻
+          - generic [ref=e23]: Projects
+        - button "Minesweeper" [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: 💣
+          - generic [ref=e26]: Minesweeper
+        - button [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: 🌐
+          - generic [ref=e29]: Internet
+        - button [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: 🖥️
+          - generic [ref=e32]: My Computer
+    - contentinfo [ref=e33]:
+      - button "Start menu" [ref=e34] [cursor=pointer]: ⊞ Start
+      - time [ref=e35]: 12:27 PM
+  - generic:
+    - paragraph: Starting Windows 95..._
+    - paragraph: Jupiter Baudot Portfolio OS

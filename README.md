@@ -1,6 +1,6 @@
 # jupiterbaudot.dev
 
-Personal portfolio for Jupiter Baudot — senior frontend engineer and design engineer, Los Angeles.
+Personal portfolio for Jupiter Baudot — senior frontend engineer and product engineer, Los Angeles.
 
 ## Concept
 

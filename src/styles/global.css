@@ -154,7 +154,7 @@ svg {
   font-size: 16px;
   color: var(--color-text-muted);
   max-width: 520px;
-  line-height: 1.6;
+  line-height: 0.6;
   margin-bottom: 16px;
 }
 
@@ -1588,4 +1588,203 @@ button.menubar__nav-item:hover {
   font-size: 11px;
   color: #888888;
   letter-spacing: 0.06em;
+}
+
+/* ─────────────────────────────────────────────────────────
+   ARE YOU LOST — WIN95 DIALOG
+───────────────────────────────────────────────────────── */
+
+.lost-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lost-dialog {
+  background-color: var(--win-chrome);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-sh);
+  border-bottom: 2px solid var(--win-border-sh);
+  min-width: 300px;
+  max-width: min(400px, calc(100vw - 32px));
+  font-family: var(--font-win);
+}
+
+.lost-dialog__titlebar {
+  height: 24px;
+  background-color: var(--win-titlebar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.lost-dialog__title {
+  font-family: var(--font-win);
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.lost-dialog__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 16px 10px;
+}
+
+.lost-dialog__icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.lost-dialog__text {
+  font-family: var(--font-win);
+  font-size: 12px;
+  color: var(--win-text);
+  line-height: 1.6;
+}
+
+.lost-dialog__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px 14px 14px;
+}
+
+.lost-btn {
+  font-family: var(--font-win);
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--win-text);
+  background-color: var(--win-chrome);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-sh);
+  border-bottom: 2px solid var(--win-border-sh);
+  padding: 4px 14px;
+  min-width: 88px;
+  cursor: pointer;
+}
+
+.lost-btn:active {
+  border-top: 2px solid var(--win-border-sh);
+  border-left: 2px solid var(--win-border-sh);
+  border-right: 2px solid var(--win-border-hi);
+  border-bottom: 2px solid var(--win-border-hi);
+}
+
+/* "default" button — has double border indicating Enter fires it */
+.lost-btn--default {
+  outline: 1px solid var(--win-border-sh);
+  outline-offset: -5px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   CLIPPY
+───────────────────────────────────────────────────────── */
+
+@keyframes clippy-slide-up {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes clippy-slide-down {
+  from { transform: translateY(0); }
+  to   { transform: translateY(110%); }
+}
+
+@keyframes clippy-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20%      { transform: rotate(-14deg); }
+  40%      { transform: rotate(11deg); }
+  60%      { transform: rotate(-8deg); }
+  80%      { transform: rotate(5deg); }
+}
+
+@keyframes clippy-droop {
+  0%   { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(8px) rotate(-6deg); }
+}
+
+.clippy-container {
+  position: fixed;
+  bottom: 0;
+  right: 28px;
+  z-index: 350;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  animation: clippy-slide-up 400ms ease-out forwards;
+}
+
+.clippy-container--exit {
+  animation: clippy-slide-down 500ms ease-in forwards;
+}
+
+.clippy-bubble {
+  background-color: #fffde8;
+  border: 1px solid #c8a42e;
+  border-radius: 8px;
+  padding: 12px 14px;
+  max-width: 220px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  font-family: var(--font-win);
+  font-size: 12px;
+  color: #111111;
+  line-height: 1.55;
+}
+
+.clippy-bubble__text {
+  margin-bottom: 10px;
+}
+
+.clippy-bubble__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.clippy-btn {
+  font-family: var(--font-win);
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--win-text);
+  background-color: var(--win-chrome);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-sh);
+  border-bottom: 2px solid var(--win-border-sh);
+  padding: 4px 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.clippy-btn:active {
+  border-top: 2px solid var(--win-border-sh);
+  border-left: 2px solid var(--win-border-sh);
+  border-right: 2px solid var(--win-border-hi);
+  border-bottom: 2px solid var(--win-border-hi);
+}
+
+.clippy-figure {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.clippy--happy {
+  animation: clippy-wiggle 0.55s ease-in-out;
+}
+
+.clippy--sad {
+  animation: clippy-droop 0.4s ease-out forwards;
 }

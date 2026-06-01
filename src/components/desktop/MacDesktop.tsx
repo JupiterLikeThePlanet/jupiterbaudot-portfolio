@@ -47,7 +47,7 @@ export function MacDesktop() {
 
   return (
     <div className="mac-desktop">
-      <MenuBar />
+      <MenuBar onOpenContact={() => openModal('contact', undefined)} />
 
       <main className="mac-desktop__stage">
         <div className="mac-desktop__wallpaper" aria-hidden="true">
@@ -59,7 +59,7 @@ export function MacDesktop() {
           <h1 className="mac-hero__name">Jupiter Baudot</h1>
           <p className="mac-hero__title">Senior Frontend Engineer · Product Engineer</p>
           <p className="mac-hero__tagline">
-            I build interfaces where design and engineering are the same decision.
+            Frontend roots, full stack reach, design taste included.
           </p>
           <p className="mac-hero__location">Los Angeles</p>
         </section>
