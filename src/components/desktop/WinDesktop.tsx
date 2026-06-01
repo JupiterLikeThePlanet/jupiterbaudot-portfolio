@@ -7,37 +7,40 @@ import { SkillsModal } from '../modals/SkillsModal';
 import { ResumeModal } from '../modals/ResumeModal';
 import { ContactModal } from '../modals/ContactModal';
 import { ProjectsModal } from '../modals/ProjectsModal';
+import { MinesweeperModal } from '../modals/MinesweeperModal';
 import { useModal } from '../../hooks/useModal';
 import type { ModalId } from '../../types';
 
 const ICONS: { id: ModalId; emoji: string; label: string }[] = [
-  { id: 'about',    emoji: '🪪', label: 'About Me'   },
-  { id: 'skills',   emoji: '📄', label: 'Skills.txt' },
-  { id: 'resume',   emoji: '📋', label: 'Resume.pdf' },
-  { id: 'contact',  emoji: '✉️',  label: 'Contact'    },
-  { id: 'projects', emoji: '💻', label: 'Projects'   },
+  { id: 'about',       emoji: '🪪', label: 'About Me'    },
+  { id: 'skills',      emoji: '📄', label: 'Skills.txt'  },
+  { id: 'resume',      emoji: '📋', label: 'Resume.pdf'  },
+  { id: 'contact',     emoji: '✉️',  label: 'Contact'     },
+  { id: 'projects',    emoji: '💻', label: 'Projects'    },
+  { id: 'minesweeper', emoji: '💣', label: 'Minesweeper' },
 ];
 
 const MODAL_TITLES: Record<ModalId, string> = {
-  about:    'About.txt',
-  skills:   'Skills.txt — read only',
-  resume:   'Resume.pdf',
-  contact:  'Contact',
-  projects: 'Projects — in progress',
+  about:       'About.txt',
+  skills:      'Skills.txt — read only',
+  resume:      'Resume.pdf',
+  contact:     'Contact',
+  projects:    'Projects — in progress',
+  minesweeper: 'Minesweeper',
 };
 
 const MODAL_CONTENT: Record<ModalId, React.ReactNode> = {
-  about:    <AboutModal />,
-  skills:   <SkillsModal />,
-  resume:   <ResumeModal />,
-  contact:  <ContactModal />,
-  projects: <ProjectsModal />,
+  about:       <AboutModal />,
+  skills:      <SkillsModal />,
+  resume:      <ResumeModal />,
+  contact:     <ContactModal />,
+  projects:    <ProjectsModal />,
+  minesweeper: <MinesweeperModal variant="win" />,
 };
 
 const EASTER_EGGS = [
   { emoji: '🌐', label: 'Internet' },
   { emoji: '🖥️', label: 'My Computer' },
-  { emoji: '🗑️', label: 'Recycle Bin' },
 ];
 
 const CONTACT_LINKS = [

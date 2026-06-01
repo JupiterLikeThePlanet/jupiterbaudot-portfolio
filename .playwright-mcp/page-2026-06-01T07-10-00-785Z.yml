@@ -1,0 +1,133 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: ⌘ Jupiter Baudot
+      - navigation "Menu bar" [ref=e7]:
+        - button "File" [ref=e9] [cursor=pointer]
+        - button "View" [ref=e11] [cursor=pointer]
+        - generic [ref=e12]: Help
+    - time [ref=e13]: 12:10 AM
+  - main [ref=e14]:
+    - region "Introduction" [ref=e16]:
+      - paragraph [ref=e17]: "STATUS: AVAILABLE FOR HIRE"
+      - heading "Jupiter Baudot" [level=1] [ref=e18]
+      - paragraph [ref=e19]: Full Stack Developer / Product Engineer
+      - paragraph [ref=e20]: I build interfaces where design and engineering are the same decision.
+      - paragraph [ref=e21]: Los Angeles
+    - complementary "Desktop icons" [ref=e22]:
+      - button "About Me" [ref=e23] [cursor=pointer]:
+        - generic [ref=e24]: 🪪
+        - generic [ref=e25]: About Me
+      - button "Skills.txt" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: 📄
+        - generic [ref=e28]: Skills.txt
+      - button "Resume.pdf" [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]: 📋
+        - generic [ref=e31]: Resume.pdf
+      - button "Contact" [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]: ✉️
+        - generic [ref=e34]: Contact
+      - button "Projects" [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]: 💻
+        - generic [ref=e37]: Projects
+      - button "Minesweeper" [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: 💣
+        - generic [ref=e40]: Minesweeper
+  - contentinfo [ref=e41]:
+    - generic [ref=e42]: jupiterbaudot.dev — portfolio OS v1.0
+  - dialog "Minesweeper" [ref=e44]:
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - button "Close" [ref=e47] [cursor=pointer]
+        - button "Minimize (not available)" [ref=e48] [cursor=pointer]
+        - button "Fullscreen (not available)" [ref=e49] [cursor=pointer]
+      - generic: Minesweeper
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic "10 mines remaining" [ref=e53]: "010"
+        - generic [ref=e54]:
+          - button "New game" [ref=e55] [cursor=pointer]: 🙂
+          - button "Toggle flag mode" [ref=e56] [cursor=pointer]: 🚩
+        - generic "1 seconds" [ref=e140]: "001"
+      - grid "Minesweeper grid" [ref=e58]:
+        - gridcell "Row 1 Col 1" [ref=e59] [cursor=pointer]
+        - gridcell "Row 1 Col 2" [ref=e60] [cursor=pointer]
+        - gridcell "Row 1 Col 3" [ref=e61] [cursor=pointer]
+        - gridcell "Row 1 Col 4" [ref=e62] [cursor=pointer]
+        - gridcell "Row 1 Col 5" [ref=e63] [cursor=pointer]
+        - gridcell "Row 1 Col 6" [ref=e64] [cursor=pointer]
+        - gridcell "Row 1 Col 7" [ref=e65] [cursor=pointer]
+        - gridcell "Row 1 Col 8" [ref=e66] [cursor=pointer]
+        - gridcell "Row 1 Col 9" [ref=e67] [cursor=pointer]
+        - gridcell "Row 2 Col 1" [ref=e68] [cursor=pointer]
+        - gridcell "Row 2 Col 2" [ref=e69] [cursor=pointer]
+        - gridcell "Row 2 Col 3" [ref=e70] [cursor=pointer]
+        - gridcell "Row 2 Col 4" [ref=e71] [cursor=pointer]
+        - gridcell "Row 2 Col 5" [ref=e72] [cursor=pointer]
+        - gridcell "Row 2 Col 6" [ref=e73] [cursor=pointer]
+        - gridcell "Row 2 Col 7" [ref=e74] [cursor=pointer]
+        - gridcell "Row 2 Col 8" [ref=e75] [cursor=pointer]
+        - gridcell "Row 2 Col 9" [ref=e76] [cursor=pointer]
+        - gridcell "Row 3 Col 1" [ref=e77] [cursor=pointer]
+        - gridcell "Row 3 Col 2" [ref=e78] [cursor=pointer]
+        - gridcell "Row 3 Col 3" [ref=e79] [cursor=pointer]
+        - gridcell "Row 3 Col 4 revealed" [ref=e141] [cursor=pointer]: "2"
+        - gridcell "Row 3 Col 5 revealed" [ref=e142] [cursor=pointer]: "1"
+        - gridcell "Row 3 Col 6 revealed" [ref=e143] [cursor=pointer]: "1"
+        - gridcell "Row 3 Col 7 revealed" [ref=e144] [cursor=pointer]: "1"
+        - gridcell "Row 3 Col 8" [ref=e84] [cursor=pointer]
+        - gridcell "Row 3 Col 9" [ref=e85] [cursor=pointer]
+        - gridcell "Row 4 Col 1" [ref=e86] [cursor=pointer]
+        - gridcell "Row 4 Col 2" [ref=e87] [cursor=pointer]
+        - gridcell "Row 4 Col 3" [ref=e88] [cursor=pointer]
+        - gridcell "Row 4 Col 4 revealed" [ref=e145] [cursor=pointer]: "1"
+        - gridcell "Row 4 Col 5 revealed" [ref=e146] [cursor=pointer]
+        - gridcell "Row 4 Col 6 revealed" [ref=e147] [cursor=pointer]
+        - gridcell "Row 4 Col 7 revealed" [ref=e148] [cursor=pointer]: "1"
+        - gridcell "Row 4 Col 8" [ref=e93] [cursor=pointer]
+        - gridcell "Row 4 Col 9" [ref=e94] [cursor=pointer]
+        - gridcell "Row 5 Col 1" [ref=e95] [cursor=pointer]
+        - gridcell "Row 5 Col 2" [ref=e96] [cursor=pointer]
+        - gridcell "Row 5 Col 3" [ref=e97] [cursor=pointer]
+        - gridcell "Row 5 Col 4 revealed" [ref=e149] [cursor=pointer]: "1"
+        - gridcell "Row 5 Col 5 revealed" [active] [ref=e150] [cursor=pointer]
+        - gridcell "Row 5 Col 6 revealed" [ref=e151] [cursor=pointer]
+        - gridcell "Row 5 Col 7 revealed" [ref=e152] [cursor=pointer]: "2"
+        - gridcell "Row 5 Col 8" [ref=e102] [cursor=pointer]
+        - gridcell "Row 5 Col 9" [ref=e103] [cursor=pointer]
+        - gridcell "Row 6 Col 1" [ref=e104] [cursor=pointer]
+        - gridcell "Row 6 Col 2" [ref=e105] [cursor=pointer]
+        - gridcell "Row 6 Col 3" [ref=e106] [cursor=pointer]
+        - gridcell "Row 6 Col 4 revealed" [ref=e153] [cursor=pointer]: "2"
+        - gridcell "Row 6 Col 5 revealed" [ref=e154] [cursor=pointer]: "1"
+        - gridcell "Row 6 Col 6 revealed" [ref=e155] [cursor=pointer]
+        - gridcell "Row 6 Col 7 revealed" [ref=e156] [cursor=pointer]: "2"
+        - gridcell "Row 6 Col 8" [ref=e111] [cursor=pointer]
+        - gridcell "Row 6 Col 9" [ref=e112] [cursor=pointer]
+        - gridcell "Row 7 Col 1" [ref=e113] [cursor=pointer]
+        - gridcell "Row 7 Col 2" [ref=e114] [cursor=pointer]
+        - gridcell "Row 7 Col 3" [ref=e115] [cursor=pointer]
+        - gridcell "Row 7 Col 4" [ref=e116] [cursor=pointer]
+        - gridcell "Row 7 Col 5 revealed" [ref=e157] [cursor=pointer]: "1"
+        - gridcell "Row 7 Col 6 revealed" [ref=e158] [cursor=pointer]
+        - gridcell "Row 7 Col 7 revealed" [ref=e159] [cursor=pointer]: "1"
+        - gridcell "Row 7 Col 8 revealed" [ref=e160] [cursor=pointer]: "2"
+        - gridcell "Row 7 Col 9" [ref=e121] [cursor=pointer]
+        - gridcell "Row 8 Col 1 revealed" [ref=e161] [cursor=pointer]: "1"
+        - gridcell "Row 8 Col 2 revealed" [ref=e162] [cursor=pointer]: "2"
+        - gridcell "Row 8 Col 3 revealed" [ref=e163] [cursor=pointer]: "3"
+        - gridcell "Row 8 Col 4 revealed" [ref=e164] [cursor=pointer]: "2"
+        - gridcell "Row 8 Col 5 revealed" [ref=e165] [cursor=pointer]: "1"
+        - gridcell "Row 8 Col 6 revealed" [ref=e166] [cursor=pointer]
+        - gridcell "Row 8 Col 7 revealed" [ref=e167] [cursor=pointer]
+        - gridcell "Row 8 Col 8 revealed" [ref=e168] [cursor=pointer]: "1"
+        - gridcell "Row 8 Col 9" [ref=e130] [cursor=pointer]
+        - gridcell "Row 9 Col 1 revealed" [ref=e169] [cursor=pointer]
+        - gridcell "Row 9 Col 2 revealed" [ref=e170] [cursor=pointer]
+        - gridcell "Row 9 Col 3 revealed" [ref=e171] [cursor=pointer]
+        - gridcell "Row 9 Col 4 revealed" [ref=e172] [cursor=pointer]
+        - gridcell "Row 9 Col 5 revealed" [ref=e173] [cursor=pointer]
+        - gridcell "Row 9 Col 6 revealed" [ref=e174] [cursor=pointer]
+        - gridcell "Row 9 Col 7 revealed" [ref=e175] [cursor=pointer]
+        - gridcell "Row 9 Col 8 revealed" [ref=e176] [cursor=pointer]: "1"
+        - gridcell "Row 9 Col 9" [ref=e139] [cursor=pointer]
