@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { MacDesktop } from './MacDesktop';
 import { WinDesktop } from './WinDesktop';
 import { BootSequence } from './BootSequence';
+import { WinBootSequence } from './WinBootSequence';
 import type { DesktopVariant } from '../../types';
 
 function getVariant(width: number): DesktopVariant {
@@ -14,9 +15,8 @@ export function Desktop() {
   const [variant, setVariant] = useState<DesktopVariant>(() =>
     getVariant(window.innerWidth)
   );
-  const [showBoot, setShowBoot] = useState(
-    () => window.innerWidth >= 1024 && !prefersReducedMotion
-  );
+  const [showBoot, setShowBoot] = useState(!prefersReducedMotion);
+  const [showWinBoot, setShowWinBoot] = useState(!prefersReducedMotion);
 
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)');
@@ -33,10 +33,17 @@ export function Desktop() {
     return () => clearTimeout(timer);
   }, [showBoot]);
 
+  useEffect(() => {
+    if (!showWinBoot) return;
+    const timer = setTimeout(() => setShowWinBoot(false), 3000);
+    return () => clearTimeout(timer);
+  }, [showWinBoot]);
+
   return (
     <>
       {variant === 'win' ? <WinDesktop /> : <MacDesktop />}
-      {showBoot && <BootSequence />}
+      {showBoot && variant === 'mac' && <BootSequence />}
+      {showWinBoot && variant === 'win' && <WinBootSequence />}
     </>
   );
 }
