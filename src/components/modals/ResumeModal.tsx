@@ -27,8 +27,8 @@ export function ResumeModal() {
       </section>
 
       <a
-        href="/resume.pdf"
-        download
+        href="/jupiter-baudot-resume.pdf"
+        download="Jupiter_Baudot_Resume.pdf"
         className="resume-download"
         aria-label="Download full resume PDF"
       >
