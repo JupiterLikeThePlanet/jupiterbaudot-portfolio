@@ -1,0 +1,40 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: ⌘ Jupiter Baudot
+        - navigation "Menu bar" [ref=e7]:
+          - button "File" [ref=e9] [cursor=pointer]
+          - button "View" [ref=e11] [cursor=pointer]
+          - generic [ref=e12]: Help
+      - time [ref=e13]: 10:31 AM
+    - main [ref=e14]:
+      - region "Introduction" [ref=e16]:
+        - paragraph [ref=e17]: "STATUS: AVAILABLE FOR HIRE"
+        - heading "Jupiter Baudot" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Senior Frontend Engineer · Product Engineer
+        - paragraph [ref=e20]: I build interfaces where design and engineering are the same decision.
+        - paragraph [ref=e21]: Los Angeles
+      - complementary "Desktop icons" [ref=e22]:
+        - button "About Me" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: 🪪
+          - generic [ref=e25]: About Me
+        - button "Skills.txt" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 📄
+          - generic [ref=e28]: Skills.txt
+        - button "Resume.pdf" [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]: 📋
+          - generic [ref=e31]: Resume.pdf
+        - button "Contact" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: ✉️
+          - generic [ref=e34]: Contact
+        - button "Projects" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: 💻
+          - generic [ref=e37]: Projects
+        - button "Minesweeper" [ref=e38] [cursor=pointer]:
+          - generic [ref=e39]: 💣
+          - generic [ref=e40]: Minesweeper
+    - contentinfo [ref=e41]:
+      - generic [ref=e42]: jupiterbaudot.dev — portfolio OS v1.0
+  - generic:
+    - generic: ⌘

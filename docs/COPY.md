@@ -16,7 +16,7 @@ OG description: Senior frontend engineer · React · TypeScript · Los Angeles
 ## Desktop hero
 
 Name: Jupiter Baudot
-Title: Full Stack Developer / Product Engineer
+Title: Senior Frontend Engineer · Product Engineer
 Status badge: STATUS: AVAILABLE FOR HIRE
 Tagline: I build interfaces where design and engineering are the same decision.
 Location line: Los Angeles

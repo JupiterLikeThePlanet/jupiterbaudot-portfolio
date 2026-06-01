@@ -11,13 +11,13 @@ import { MinesweeperModal } from '../modals/MinesweeperModal';
 import { useModal } from '../../hooks/useModal';
 import type { ModalId } from '../../types';
 
-const ICONS: { id: ModalId; emoji: string; label: string }[] = [
-  { id: 'about',       emoji: '🪪', label: 'About Me'    },
-  { id: 'skills',      emoji: '📄', label: 'Skills.txt'  },
-  { id: 'resume',      emoji: '📋', label: 'Resume.pdf'  },
-  { id: 'contact',     emoji: '✉️',  label: 'Contact'     },
-  { id: 'projects',    emoji: '💻', label: 'Projects'    },
-  { id: 'minesweeper', emoji: '💣', label: 'Minesweeper' },
+const ICONS: { id: ModalId; emoji: string; label: string; gradient: string }[] = [
+  { id: 'about',       emoji: '🪪', label: 'About Me',    gradient: 'linear-gradient(135deg, #f0b8d8, #d946ef)' },
+  { id: 'skills',      emoji: '📄', label: 'Skills.txt',  gradient: 'linear-gradient(135deg, #a8c8f0, #3b82f6)' },
+  { id: 'resume',      emoji: '📋', label: 'Resume.pdf',  gradient: 'linear-gradient(135deg, #fde68a, #f59e0b)' },
+  { id: 'contact',     emoji: '✉️',  label: 'Contact',     gradient: 'linear-gradient(135deg, #a8f0d0, #10b981)' },
+  { id: 'projects',    emoji: '💻', label: 'Projects',    gradient: 'linear-gradient(135deg, #c4a8f0, #8b2cf5)' },
+  { id: 'minesweeper', emoji: '💣', label: 'Minesweeper', gradient: 'linear-gradient(135deg, #fca5a5, #ef4444)' },
 ];
 
 const MODAL_TITLES: Record<ModalId, string> = {
@@ -57,7 +57,7 @@ export function MacDesktop() {
         <section className="mac-desktop__hero" aria-label="Introduction">
           <p className="mac-hero__status">STATUS: AVAILABLE FOR HIRE</p>
           <h1 className="mac-hero__name">Jupiter Baudot</h1>
-          <p className="mac-hero__title">Full Stack Developer / Product Engineer</p>
+          <p className="mac-hero__title">Senior Frontend Engineer · Product Engineer</p>
           <p className="mac-hero__tagline">
             I build interfaces where design and engineering are the same decision.
           </p>
@@ -65,11 +65,12 @@ export function MacDesktop() {
         </section>
 
         <aside className="mac-desktop__icons" aria-label="Desktop icons">
-          {ICONS.map(({ id, emoji, label }) => (
+          {ICONS.map(({ id, emoji, label, gradient }) => (
             <DesktopIcon
               key={id}
               emoji={emoji}
               label={label}
+              gradient={gradient}
               variant="mac"
               onClick={(e) => handleIconClick(id, e)}
             />

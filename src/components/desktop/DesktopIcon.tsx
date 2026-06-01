@@ -4,11 +4,12 @@ interface DesktopIconProps {
   emoji: string;
   label: string;
   variant: DesktopVariant;
+  gradient?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   decorative?: boolean;
 }
 
-export function DesktopIcon({ emoji, label, variant, onClick, decorative = false }: DesktopIconProps) {
+export function DesktopIcon({ emoji, label, variant, gradient, onClick, decorative = false }: DesktopIconProps) {
   if (variant === 'mac') {
     return (
       <button
@@ -17,7 +18,13 @@ export function DesktopIcon({ emoji, label, variant, onClick, decorative = false
         aria-label={label}
         type="button"
       >
-        <span className="mac-icon__box" aria-hidden="true">{emoji}</span>
+        <span
+          className="mac-icon__box"
+          aria-hidden="true"
+          style={gradient ? ({ '--icon-gradient': gradient } as React.CSSProperties) : undefined}
+        >
+          {emoji}
+        </span>
         <span className="mac-icon__label">{label}</span>
       </button>
     );

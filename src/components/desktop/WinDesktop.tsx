@@ -64,7 +64,7 @@ export function WinDesktop() {
       <main className="win-desktop__area" aria-label="Windows 95 desktop">
         <header className="win-desktop__welcome">
           <p className="win-desktop__name">Jupiter Baudot</p>
-          <p className="win-desktop__position">Full Stack Developer / Product Engineer</p>
+          <p className="win-desktop__position">Senior Frontend Engineer · Product Engineer</p>
         </header>
 
         <section className="win-icon-grid" aria-label="Desktop icons">
@@ -106,7 +106,7 @@ export function WinDesktop() {
           <div className="win-start-menu__content">
             <div className="win-start-menu__identity">
               <p className="win-start-menu__name">Jupiter Baudot</p>
-              <p className="win-start-menu__role">Full Stack Developer / Product Engineer</p>
+              <p className="win-start-menu__role">Senior Frontend Engineer · Product Engineer</p>
             </div>
             <div className="win-start-menu__divider" />
             <ul className="win-start-menu__links" role="list">

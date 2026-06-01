@@ -24,7 +24,7 @@ function makeParticles(): Particle[] {
     duration: Math.random() * 1.4 + 1.1,
     delay: -(Math.random() * 2.5),
     fontSize: Math.random() * 8 + 11,
-    dismissDelay: Math.random() * 0.18,
+    dismissDelay: Math.random() * 0.32,
   }));
 }
 
