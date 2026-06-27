@@ -45,6 +45,7 @@ export function ModalWindow({ id, title, variant, onClose, isClosing = false, ch
         <div
           ref={dialogRef}
           className={`modal-window modal-window--mac${isClosing ? ' modal-window--closing' : ''}`}
+          data-modal={id}
           role="dialog"
           aria-modal="true"
           aria-labelledby={labelId}

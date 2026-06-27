@@ -855,6 +855,10 @@ button.menubar__nav-item:hover {
   max-height: calc(100vh - 80px - 36px);
 }
 
+[data-modal="projects"] .modal-body {
+  height: 320px;
+}
+
 /* ─────────────────────────────────────────────────────────
    MODAL WINDOW — WIN95 VARIANT
 ───────────────────────────────────────────────────────── */
@@ -1161,6 +1165,11 @@ button.menubar__nav-item:hover {
   font-size: 13px;
   color: var(--color-text-muted);
   line-height: 1.55;
+}
+
+.project-card__links {
+  display: flex;
+  gap: 12px;
 }
 
 .project-card__link {
